@@ -1,13 +1,17 @@
 import React from "react";
-import Pokemon from "./components/Pokemon";
+//import Pokemon from "./components/Pokemon";
+import Menu from "./components/Menu";
+import Header from "./components/Header";
 import PokemonProvider from "./hooks/useContext/PokemonContext";
 
 const App = () => {
   return (
-    <PokemonProvider>
-      <h1>Poke-Api</h1>
-      <Pokemon />
-    </PokemonProvider>
+    <>
+      <Header subtitle="View All Pokemon!" />
+      <PokemonProvider>
+        <Menu />
+      </PokemonProvider>
+    </>
   );
 };
 

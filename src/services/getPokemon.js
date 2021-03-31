@@ -16,17 +16,28 @@ const getData = async(pokemon) => {
 };
 
 const pokemonListPromise = getPokemon();
-console.log(pokemonListPromise.toString()); //es una promesa
+//console.log(pokemonListPromise.toString()); //es una promesa
 pokemonListPromise.then((list) => {
     //console.log(list.length); // es una lista de promesas
     //console.log(list[0].abilities[0].ability);
     return list;
 });
 /* const getPokemon = () => {
-    const pokemons = [
-        { id: 1, name: "Bulbasaur" },
-        { id: 2, name: "Charmander" },
-        { id: 3, name: "Squirtle" },
+    const pokemons = [{
+            id: 0,
+            name: "Bulbasaur",
+            img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+        },
+        {
+            id: 1,
+            name: "Ivysaur",
+            img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
+        },
+        {
+            id: 2,
+            name: "Venusaur",
+            img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
+        },
     ];
     return pokemons;
 }; */

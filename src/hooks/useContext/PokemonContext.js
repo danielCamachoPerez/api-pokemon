@@ -8,10 +8,10 @@ const PokemonProvider = ({children}) => {
     useEffect(() => {
        //console.log(getPokemon())
        getPokemon().then(x=>x.map(x=>setPokemon(data=>[...data, x])))
+       //setPokemon(getPokemon())
     }, []);
     const value = {
         pokemon,
-        setPokemon
     }
     return (
         <PokemonContext.Provider
